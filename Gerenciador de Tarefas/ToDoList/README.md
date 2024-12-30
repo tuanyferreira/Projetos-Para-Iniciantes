@@ -1,18 +1,67 @@
-## Getting Started
+## Resumo do Projeto: Gerenciador de Tarefas em Java
+O objetivo foi criar um programa simples em Java que permite gerenciar tarefas (adicionar, listar e atualizar o status). Aqui estão os passos de forma resumida:
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### Estrutura do Projeto
+O projeto contém 3 principais componentes:
 
-## Folder Structure
+Classe Tarefa:
+- Representa uma tarefa com os atributos:
+- id: Identificador único.
+- titulo: Nome da tarefa.
+- descricao: Detalhe sobre a tarefa.
+- concluida: Indica se a tarefa está concluída (true/false).
+- Contém métodos para:
+- Obter e atualizar os atributos.
+- Um toString() para exibir a tarefa de forma legível.
 
-The workspace contains two folders by default, where:
+Classe GerenciadorDeTarefas:
+- Gerencia as tarefas usando uma ArrayList.
+- Métodos principais:
+- adicionarTarefa(String titulo, String descricao): Adiciona uma tarefa à lista.
+- listarTarefas(): Exibe todas as tarefas (concluídas ou pendentes).
+- atualizarTarefa(int id): Atualiza o status da tarefa entre "Pendente" e "Concluída".
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+ Classe Main:
+- Controla o fluxo do programa.
+- Mostra um menu interativo que permite o usuário:
+- Adicionar tarefas.
+- Listar tarefas.
+- Atualizar o status de uma tarefa (Pendente/Concluída).
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Como o Programa Funciona:
+1. Adicionar Tarefa (Opção 1):
+Insira um título e uma descrição. A tarefa será salva e marcada como "Pendente".
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+2.Listar Tarefas (Opção 2):
+Exibe todas as tarefas no formato:
 
-## Dependency Management
+3.Atualizar Tarefa (Opção 3):
+Escolha o ID da tarefa para alternar seu status entre "Pendente" e "Concluída".
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+4.Sair (Opção 0): 
+encerra o programa
+
+
+### Exemplo de Execução:
+== Gerenciador de Tarefas ==
+1. Adicionar Tarefa
+2. Listar Tarefas
+3. Atualizar Tarefa
+0. Sair
+Escolha uma opção: 1
+Título: Estudar Java
+Descrição: Aprender o básico de programação orientada a objetos
+Tarefa adicionada!
+
+Escolha uma opção: 2
+1 - Estudar Java [Pendente]
+
+Escolha uma opção: 3
+ID da tarefa para atualizar: 1
+Status da tarefa atualizado!
+
+Escolha uma opção: 2
+1 - Estudar Java [Concluída]
+
+Escolha uma opção: 0
+Saindo...
